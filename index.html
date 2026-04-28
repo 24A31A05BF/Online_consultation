@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConsultPro – Connect with Experts Anytime</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav class="nav">
+  <a class="nav-logo" href="#" onclick="showScreen('landing')">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+    </div>
+    ConsultPro
+  </a>
+  <div class="nav-links">
+    <a class="nav-link" onclick="showScreen('listing')">Find Experts</a>
+    <a class="nav-link" onclick="showScreen('landing')">How it Works</a>
+    <a class="nav-link" onclick="showScreen('landing')">Pricing</a>
+    <button class="btn btn-ghost btn-sm" onclick="showScreen('auth')">Log in</button>
+    <button class="btn btn-primary btn-sm" onclick="showScreen('auth')">Get Started</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     1. LANDING
+═══════════════════════════════════════════ -->
+<div id="screen-landing" class="screen active">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge"><span></span>Trusted by 50,000+ users worldwide</div>
+    <h1>Connect with <em>Experts</em><br>Anytime, Anywhere</h1>
+    <p>Book consultations with certified doctors, lawyers, financial advisors and more — all from the comfort of your home.</p>
+    <div class="search-bar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Search for doctors, lawyers, consultants…">
+      <button class="btn btn-primary" onclick="showScreen('listing')">Search</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">2,400+</div><div class="stat-label">Verified Experts</div></div>
+      <div class="stat"><div class="stat-num">50K+</div><div class="stat-label">Consultations Done</div></div>
+      <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Average Rating</div></div>
+      <div class="stat"><div class="stat-num">98%</div><div class="stat-label">Satisfaction Rate</div></div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" style="background:white;">
+    <div class="container">
+      <div class="section-title">Browse by Category</div>
+      <div class="section-sub">Choose from hundreds of verified professionals across specialties</div>
+      <div class="categories-grid">
+        <div class="category-card" onclick="showScreen('listing')">
+          <div class="category-icon" style="background:#dbeafe;">🩺</div>
+          <span>Doctors</span>
+        </div>
+        <div class="category-card" onclick="showScreen('listing')">
+          <div class="category-icon" style="background:#dcfce7;">⚖️</div>
+          <span>Lawyers</span>
+        </div>
+        <div class="category-card" onclick="showScreen('listing')">
+          <div class="category-icon" style="background:#fef3c7;">💰</div>
+          <span>Finance</span>
+        </div>
+        <div class="category-card" onclick="showScreen('listing')">
+          <div class="category-icon" style="background:#fce7f3;">🏋️</div>
+          <span>Fitness</span>
+        </div>
+        <div class="category-card" onclick="showScreen('listing')">
+          <div class="category-icon" style="background:#ede9fe;">🧠</div>
+          <span>Therapy</span>
+        </div>
+        <div class="category-card" onclick="showScreen('listing')">
+          <div class="category-icon" style="background:#e0f2fe;">📊</div>
+          <span>Business</span>
+        </div>
+        <div class="category-card" onclick="showScreen('listing')">
+          <div class="category-icon" style="background:#fee2e2;">🍽️</div>
+          <span>Nutrition</span>
+        </div>
+        <div class="category-card" onclick="showScreen('listing')">
+          <div class="category-icon" style="background:#f0fdf4;">🎓</div>
+          <span>Education</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">How ConsultPro Works</div>
+      <div class="section-sub">Three simple steps to get expert help</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
+        <div style="text-align:center;padding:32px 20px;background:white;border-radius:var(--radius-xl);border:1.5px solid var(--gray-100);">
+          <div style="width:60px;height:60px;border-radius:50%;background:var(--blue-50);border:2px solid var(--blue-200);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 20px;">🔍</div>
+          <div style="font-weight:700;font-size:0.95rem;color:var(--gray-800);margin-bottom:8px;">1. Find Your Expert</div>
+          <div style="font-size:0.88rem;color:var(--gray-500);line-height:1.6;">Browse our curated list of verified professionals by specialty, rating, and availability.</div>
+        </div>
+        <div style="text-align:center;padding:32px 20px;background:white;border-radius:var(--radius-xl);border:1.5px solid var(--gray-100);">
+          <div style="width:60px;height:60px;border-radius:50%;background:var(--blue-50);border:2px solid var(--blue-200);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 20px;">📅</div>
+          <div style="font-weight:700;font-size:0.95rem;color:var(--gray-800);margin-bottom:8px;">2. Book a Slot</div>
+          <div style="font-size:0.88rem;color:var(--gray-500);line-height:1.6;">Pick a time that works for you and instantly confirm your appointment with secure payment.</div>
+        </div>
+        <div style="text-align:center;padding:32px 20px;background:white;border-radius:var(--radius-xl);border:1.5px solid var(--gray-100);">
+          <div style="width:60px;height:60px;border-radius:50%;background:var(--blue-50);border:2px solid var(--blue-200);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 20px;">💬</div>
+          <div style="font-weight:700;font-size:0.95rem;color:var(--gray-800);margin-bottom:8px;">3. Consult & Connect</div>
+          <div style="font-size:0.88rem;color:var(--gray-500);line-height:1.6;">Meet via secure video call or chat — get personalized advice from the comfort of home.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background:white;">
+    <div class="container">
+      <div class="section-title">What Our Users Say</div>
+      <div class="section-sub">Join thousands of satisfied clients</div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"Incredibly easy to use. Got connected to a cardiologist within hours. The video call quality was excellent and the doctor was very thorough."</div>
+          <div class="testimonial-author">
+            <div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#60a5fa);">PR</div>
+            <div>
+              <div class="testimonial-name">Priya Reddy</div>
+              <div class="testimonial-role">Patient, Hyderabad</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"I needed legal advice urgently. Found a corporate lawyer in minutes, had my documents reviewed same day. Saved me hours of searching."</div>
+          <div class="testimonial-author">
+            <div class="avatar" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa);">AK</div>
+            <div>
+              <div class="testimonial-name">Arjun Kapoor</div>
+              <div class="testimonial-role">Entrepreneur, Mumbai</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"The platform is beautifully designed and the experts are top-notch. My financial advisor helped me plan my retirement strategy perfectly."</div>
+          <div class="testimonial-author">
+            <div class="avatar" style="background:linear-gradient(135deg,#10b981,#34d399);">SM</div>
+            <div>
+              <div class="testimonial-name">Sunita Mehta</div>
+              <div class="testimonial-role">Professional, Bangalore</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align:center;">
+    <div class="container">
+      <div style="background:linear-gradient(135deg,var(--blue-700),var(--blue-500));border-radius:var(--radius-xl);padding:64px 40px;color:white;">
+        <h2 style="font-family:var(--font-display);font-size:2.2rem;margin-bottom:12px;">Ready to get started?</h2>
+        <p style="opacity:0.85;font-size:1rem;margin-bottom:32px;">Join 50,000+ users who trust ConsultPro for expert guidance.</p>
+        <button class="btn btn-lg" style="background:white;color:var(--blue-700);" onclick="showScreen('auth')">Create Free Account →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">ConsultPro</div>
+    <p>Expert consultations at your fingertips.</p>
+    <div class="footer-links">
+      <a href="#">About</a><a href="#">Careers</a><a href="#">Privacy</a>
+      <a href="#">Terms</a><a href="#">Support</a><a href="#">Blog</a>
+    </div>
+    <div class="footer-copy">© 2025 ConsultPro. All rights reserved.</div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     2. AUTH
+═══════════════════════════════════════════ -->
+<div id="screen-auth" class="screen">
+  <div class="auth-screen">
+    <div class="auth-card">
+      <div class="auth-logo">ConsultPro</div>
+      <div class="auth-tabs">
+        <div class="auth-tab active" onclick="switchAuthTab(this,'login')">Log In</div>
+        <div class="auth-tab" onclick="switchAuthTab(this,'signup')">Sign Up</div>
+      </div>
+      <div id="login-form">
+        <div class="form-group">
+          <label class="form-label">Email address</label>
+          <input class="form-input" type="email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input class="form-input" type="password" placeholder="••••••••">
+        </div>
+        <div style="text-align:right;margin-bottom:20px;"><a style="font-size:0.85rem;color:var(--blue-600);cursor:pointer;font-weight:500;">Forgot password?</a></div>
+        <button class="btn btn-primary w-full" onclick="showScreen('dashboard')" style="justify-content:center;padding:13px;">Log In</button>
+        <div class="divider"><span>or continue with</span></div>
+        <button class="social-btn">🌐 Continue with Google</button>
+        <button class="social-btn">🍎 Continue with Apple</button>
+      </div>
+      <div id="signup-form" style="display:none;">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">First name</label><input class="form-input" type="text" placeholder="Jane"></div>
+          <div class="form-group"><label class="form-label">Last name</label><input class="form-input" type="text" placeholder="Doe"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Email address</label><input class="form-input" type="email" placeholder="you@example.com"></div>
+        <div class="form-group"><label class="form-label">Password</label><input class="form-input" type="password" placeholder="Min. 8 characters"></div>
+        <button class="btn btn-primary w-full" onclick="showScreen('dashboard')" style="justify-content:center;padding:13px;">Create Account</button>
+        <div class="divider"><span>or</span></div>
+        <button class="social-btn">🌐 Continue with Google</button>
+      </div>
+      <div class="auth-footer">By continuing, you agree to our <a>Terms of Service</a> and <a>Privacy Policy</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     3. DASHBOARD
+═══════════════════════════════════════════ -->
+<div id="screen-dashboard" class="screen">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section-label">Main</div>
+      <div class="sidebar-item active" onclick="showScreen('dashboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </div>
+      <div class="sidebar-item" onclick="showScreen('listing')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Find Experts
+      </div>
+      <div class="sidebar-item" onclick="showScreen('booking')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Appointments
+      </div>
+      <div class="sidebar-item" onclick="showScreen('chat')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Messages
+        <span class="sidebar-badge">3</span>
+      </div>
+      <div class="sidebar-item" onclick="showScreen('video')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        Video Calls
+      </div>
+      <div class="sidebar-section-label">Account</div>
+      <div class="sidebar-item" onclick="showScreen('profile')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        My Profile
+      </div>
+      <div class="sidebar-item" onclick="showScreen('notifications')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        Notifications
+        <span class="sidebar-badge">5</span>
+      </div>
+      <div class="sidebar-item" onclick="showScreen('landing')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Log Out
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="page-header">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="page-title">Good morning, Priya 👋</div>
+            <div class="page-sub">Here's what's happening today</div>
+          </div>
+          <button class="btn btn-primary" onclick="showScreen('listing')">+ Book Consultation</button>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-card-icon" style="background:#dbeafe;">📅</div>
+          <div class="stat-card-label">Upcoming</div>
+          <div class="stat-card-value">3</div>
+          <div class="stat-card-delta">↑ 2 this week</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon" style="background:#dcfce7;">✅</div>
+          <div class="stat-card-label">Completed</div>
+          <div class="stat-card-value">14</div>
+          <div class="stat-card-delta">All time</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon" style="background:#fef3c7;">💬</div>
+          <div class="stat-card-label">Messages</div>
+          <div class="stat-card-value">3</div>
+          <div class="stat-card-delta">Unread</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon" style="background:#ede9fe;">⭐</div>
+          <div class="stat-card-label">Avg Rating Given</div>
+          <div class="stat-card-value">4.8</div>
+          <div class="stat-card-delta">Your reviews</div>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title">Upcoming Appointments</div>
+          <div class="appt-item">
+            <div class="appt-avatar" style="background:#dbeafe;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">🩺</div>
+            <div class="appt-info">
+              <div class="appt-name">Dr. Ananya Sharma</div>
+              <div class="appt-meta">Cardiologist · Video Call</div>
+            </div>
+            <div>
+              <div class="appt-time">Today, 3:00 PM</div>
+              <div style="text-align:right;margin-top:4px;"><span class="status-badge upcoming">Upcoming</span></div>
+            </div>
+          </div>
+          <div class="appt-item">
+            <div class="appt-avatar" style="background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">⚖️</div>
+            <div class="appt-info">
+              <div class="appt-name">Adv. Rohan Mehta</div>
+              <div class="appt-meta">Corporate Lawyer · Chat</div>
+            </div>
+            <div>
+              <div class="appt-time">Tomorrow, 11 AM</div>
+              <div style="text-align:right;margin-top:4px;"><span class="status-badge upcoming">Confirmed</span></div>
+            </div>
+          </div>
+          <div class="appt-item">
+            <div class="appt-avatar" style="background:#fef3c7;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">💰</div>
+            <div class="appt-info">
+              <div class="appt-name">Vikram Nair, CFP</div>
+              <div class="appt-meta">Financial Advisor · Video Call</div>
+            </div>
+            <div>
+              <div class="appt-time">Jan 18, 2 PM</div>
+              <div style="text-align:right;margin-top:4px;"><span class="status-badge upcoming">Upcoming</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Recent Consultations</div>
+          <div class="appt-item">
+            <div class="appt-avatar" style="background:#ede9fe;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">🧠</div>
+            <div class="appt-info">
+              <div class="appt-name">Dr. Kavya Iyer</div>
+              <div class="appt-meta">Psychologist · Jan 10</div>
+            </div>
+            <span class="status-badge completed">Completed</span>
+          </div>
+          <div class="appt-item">
+            <div class="appt-avatar" style="background:#fee2e2;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">🍽️</div>
+            <div class="appt-info">
+              <div class="appt-name">Divya Pillai, RD</div>
+              <div class="appt-meta">Nutritionist · Jan 7</div>
+            </div>
+            <span class="status-badge completed">Completed</span>
+          </div>
+          <div class="appt-item">
+            <div class="appt-avatar" style="background:#e0f2fe;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">📊</div>
+            <div class="appt-info">
+              <div class="appt-name">Suresh Kumar</div>
+              <div class="appt-meta">Business Consultant · Jan 3</div>
+            </div>
+            <span class="status-badge cancelled">Cancelled</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     4. EXPERT LISTING
+═══════════════════════════════════════════ -->
+<div id="screen-listing" class="screen">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-item" onclick="showScreen('dashboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </div>
+      <div class="sidebar-item active" onclick="showScreen('listing')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Find Experts
+      </div>
+      <div class="sidebar-item" onclick="showScreen('booking')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Appointments
+      </div>
+      <div class="sidebar-item" onclick="showScreen('chat')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Messages
+        <span class="sidebar-badge">3</span>
+      </div>
+      <div class="sidebar-section-label">Account</div>
+      <div class="sidebar-item" onclick="showScreen('profile')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        My Profile
+      </div>
+      <div class="sidebar-item" onclick="showScreen('notifications')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        Notifications
+        <span class="sidebar-badge">5</span>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="page-header">
+        <div class="page-title">Find Experts</div>
+        <div class="page-sub">Browse 2,400+ verified professionals</div>
+      </div>
+      <div class="search-bar" style="max-width:100%;margin-bottom:16px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search by name, specialty, or keyword…">
+        <button class="btn btn-primary btn-sm">Search</button>
+      </div>
+      <div class="filter-bar">
+        <div class="filter-chip active">All</div>
+        <div class="filter-chip">Doctors</div>
+        <div class="filter-chip">Lawyers</div>
+        <div class="filter-chip">Finance</div>
+        <div class="filter-chip">Fitness</div>
+        <div class="filter-chip">Therapy</div>
+        <div class="filter-chip">Business</div>
+        <div class="filter-chip" style="margin-left:auto;">⚙ Filters</div>
+      </div>
+      <div class="experts-grid">
+        <div class="expert-card" onclick="showScreen('expert')">
+          <div class="expert-card-cover" style="background:linear-gradient(135deg,#1d4ed8,#3b82f6);">
+            <div class="expert-card-avatar">🩺</div>
+          </div>
+          <div class="expert-card-body">
+            <div class="expert-card-name">Dr. Ananya Sharma</div>
+            <div class="expert-card-role">Cardiologist</div>
+            <div class="expert-card-meta">
+              <div class="expert-meta-item">📍 Hyderabad</div>
+              <div class="expert-meta-item">🕒 12 yrs exp</div>
+            </div>
+            <div class="expert-card-tags">
+              <span class="tag">Heart Disease</span><span class="tag">ECG</span><span class="tag">Hypertension</span>
+            </div>
+            <div class="expert-card-footer">
+              <div>
+                <div class="expert-price">₹800 <span>/ 30 min</span></div>
+                <div class="star-rating" style="margin-top:4px;"> 4.9 (312)</div>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation();showScreen('booking')">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="expert-card" onclick="showScreen('expert')">
+          <div class="expert-card-cover" style="background:linear-gradient(135deg,#065f46,#10b981);">
+            <div class="expert-card-avatar">⚖️</div>
+          </div>
+          <div class="expert-card-body">
+            <div class="expert-card-name">Adv. Rohan Mehta</div>
+            <div class="expert-card-role">Corporate Lawyer</div>
+            <div class="expert-card-meta">
+              <div class="expert-meta-item">📍 Mumbai</div>
+              <div class="expert-meta-item">🕒 8 yrs exp</div>
+            </div>
+            <div class="expert-card-tags">
+              <span class="tag">Contracts</span><span class="tag">IP Law</span><span class="tag">Startups</span>
+            </div>
+            <div class="expert-card-footer">
+              <div>
+                <div class="expert-price">₹1,200 <span>/ 30 min</span></div>
+                <div class="star-rating" style="margin-top:4px;"> 4.8 (187)</div>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation();showScreen('booking')">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="expert-card" onclick="showScreen('expert')">
+          <div class="expert-card-cover" style="background:linear-gradient(135deg,#7c3aed,#a78bfa);">
+            <div class="expert-card-avatar">🧠</div>
+          </div>
+          <div class="expert-card-body">
+            <div class="expert-card-name">Dr. Kavya Iyer</div>
+            <div class="expert-card-role">Clinical Psychologist</div>
+            <div class="expert-card-meta">
+              <div class="expert-meta-item">📍 Bangalore</div>
+              <div class="expert-meta-item">🕒 6 yrs exp</div>
+            </div>
+            <div class="expert-card-tags">
+              <span class="tag">Anxiety</span><span class="tag">CBT</span><span class="tag">Stress</span>
+            </div>
+            <div class="expert-card-footer">
+              <div>
+                <div class="expert-price">₹650 <span>/ 45 min</span></div>
+                <div class="star-rating" style="margin-top:4px;"> 4.9 (224)</div>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation();showScreen('booking')">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="expert-card" onclick="showScreen('expert')">
+          <div class="expert-card-cover" style="background:linear-gradient(135deg,#b45309,#f59e0b);">
+            <div class="expert-card-avatar">💰</div>
+          </div>
+          <div class="expert-card-body">
+            <div class="expert-card-name">Vikram Nair, CFP</div>
+            <div class="expert-card-role">Financial Planner</div>
+            <div class="expert-card-meta">
+              <div class="expert-meta-item">📍 Pune</div>
+              <div class="expert-meta-item">🕒 15 yrs exp</div>
+            </div>
+            <div class="expert-card-tags">
+              <span class="tag">Investments</span><span class="tag">Retirement</span><span class="tag">Tax</span>
+            </div>
+            <div class="expert-card-footer">
+              <div>
+                <div class="expert-price">₹1,500 <span>/ 60 min</span></div>
+                <div class="star-rating" style="margin-top:4px;"> 5.0 (89)</div>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation();showScreen('booking')">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="expert-card" onclick="showScreen('expert')">
+          <div class="expert-card-cover" style="background:linear-gradient(135deg,#dc2626,#f87171);">
+            <div class="expert-card-avatar">🍽️</div>
+          </div>
+          <div class="expert-card-body">
+            <div class="expert-card-name">Divya Pillai, RD</div>
+            <div class="expert-card-role">Registered Dietitian</div>
+            <div class="expert-card-meta">
+              <div class="expert-meta-item">📍 Chennai</div>
+              <div class="expert-meta-item">🕒 5 yrs exp</div>
+            </div>
+            <div class="expert-card-tags">
+              <span class="tag">Weight Loss</span><span class="tag">Diabetes</span><span class="tag">PCOS</span>
+            </div>
+            <div class="expert-card-footer">
+              <div>
+                <div class="expert-price">₹500 <span>/ 30 min</span></div>
+                <div class="star-rating" style="margin-top:4px;"> 4.7 (156)</div>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation();showScreen('booking')">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="expert-card" onclick="showScreen('expert')">
+          <div class="expert-card-cover" style="background:linear-gradient(135deg,#0369a1,#0ea5e9);">
+            <div class="expert-card-avatar">🏋️</div>
+          </div>
+          <div class="expert-card-body">
+            <div class="expert-card-name">Aryan Singh, CSCS</div>
+            <div class="expert-card-role">Fitness & Performance Coach</div>
+            <div class="expert-card-meta">
+              <div class="expert-meta-item">📍 Delhi</div>
+              <div class="expert-meta-item">🕒 7 yrs exp</div>
+            </div>
+            <div class="expert-card-tags">
+              <span class="tag">Strength</span><span class="tag">Athletic</span><span class="tag">Rehab</span>
+            </div>
+            <div class="expert-card-footer">
+              <div>
+                <div class="expert-price">₹400 <span>/ 45 min</span></div>
+                <div class="star-rating" style="margin-top:4px;"> 4.8 (203)</div>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation();showScreen('booking')">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     5. EXPERT PROFILE
+═══════════════════════════════════════════ -->
+<div id="screen-expert" class="screen">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-item" onclick="showScreen('dashboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </div>
+      <div class="sidebar-item active" onclick="showScreen('listing')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Find Experts
+      </div>
+      <div class="sidebar-item" onclick="showScreen('chat')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Messages
+        <span class="sidebar-badge">3</span>
+      </div>
+      <div class="sidebar-section-label">Account</div>
+      <div class="sidebar-item" onclick="showScreen('profile')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        My Profile
+      </div>
+    </aside>
+    <main class="main-content">
+      <div style="margin-bottom:16px;">
+        <a onclick="showScreen('listing')" style="color:var(--blue-600);cursor:pointer;font-size:0.9rem;font-weight:500;">← Back to Listing</a>
+      </div>
+      <div class="profile-hero">
+        <div class="profile-hero-avatar">🩺</div>
+        <div>
+          <div class="profile-hero-name">Dr. Ananya Sharma</div>
+          <div class="profile-hero-role">Cardiologist · MBBS, MD (Cardiology), FACC</div>
+          <div class="profile-hero-chips">
+            <span class="profile-hero-chip">⭐ 4.9 (312 reviews)</span>
+            <span class="profile-hero-chip">🕒 12 years exp</span>
+            <span class="profile-hero-chip">📍 Hyderabad</span>
+            <span class="profile-hero-chip">✅ Verified</span>
+          </div>
+        </div>
+        <div style="margin-left:auto;display:flex;flex-direction:column;gap:10px;align-items:flex-end;">
+          <button class="btn btn-lg" style="background:white;color:var(--blue-700);" onclick="showScreen('booking')">Book Consultation</button>
+          <button class="btn btn-outline" style="border-color:rgba(255,255,255,0.4);color:white;" onclick="showScreen('chat')">Send Message</button>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start;">
+        <div>
+          <div class="tabs">
+            <div class="tab active" onclick="switchProfileTab(this,'about')">About</div>
+            <div class="tab" onclick="switchProfileTab(this,'reviews')">Reviews (312)</div>
+          </div>
+          <div id="about-tab">
+            <div class="card mb-6">
+              <div class="card-title">About Dr. Ananya Sharma</div>
+              <p style="color:var(--gray-600);font-size:0.95rem;line-height:1.7;margin-bottom:14px;">Dr. Ananya Sharma is a board-certified cardiologist with over 12 years of experience in diagnosing and treating heart conditions. She completed her MD in Cardiology from AIIMS Delhi and is a Fellow of the American College of Cardiology (FACC).</p>
+              <p style="color:var(--gray-600);font-size:0.95rem;line-height:1.7;">She specializes in preventive cardiology, heart failure management, and cardiac rehabilitation. Dr. Sharma is known for her patient-centered approach and clear communication of complex medical information.</p>
+            </div>
+            <div class="card mb-6">
+              <div class="card-title">Specializations</div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                <span class="tag" style="background:var(--blue-50);color:var(--blue-700);font-size:0.85rem;padding:6px 14px;">Preventive Cardiology</span>
+                <span class="tag" style="background:var(--blue-50);color:var(--blue-700);font-size:0.85rem;padding:6px 14px;">Heart Failure</span>
+                <span class="tag" style="background:var(--blue-50);color:var(--blue-700);font-size:0.85rem;padding:6px 14px;">Arrhythmia</span>
+                <span class="tag" style="background:var(--blue-50);color:var(--blue-700);font-size:0.85rem;padding:6px 14px;">Hypertension</span>
+                <span class="tag" style="background:var(--blue-50);color:var(--blue-700);font-size:0.85rem;padding:6px 14px;">Echocardiography</span>
+                <span class="tag" style="background:var(--blue-50);color:var(--blue-700);font-size:0.85rem;padding:6px 14px;">Cardiac Rehab</span>
+              </div>
+            </div>
+          </div>
+          <div id="reviews-tab" style="display:none;">
+            <div class="card">
+              <div class="card-title">Patient Reviews</div>
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="review-author">Priya R.</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+                <div class="review-text">Extremely knowledgeable and caring. She explained my ECG results clearly and gave a very practical treatment plan. Highly recommend!</div>
+                <div class="review-date">January 10, 2025</div>
+              </div>
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="review-author">Arjun M.</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+                <div class="review-text">Outstanding doctor. The video consultation was smooth and she was very patient in answering all my questions. Best cardiologist I've consulted online.</div>
+                <div class="review-date">January 5, 2025</div>
+              </div>
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="review-author">Sunita K.</div>
+                  <div class="review-stars">★★★★☆</div>
+                </div>
+                <div class="review-text">Very professional and thorough. She reviewed my medical history carefully before the consultation. The session ran slightly over time which was actually helpful.</div>
+                <div class="review-date">December 28, 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card" style="position:sticky;top:80px;">
+            <div class="card-title">Book a Consultation</div>
+            <div style="margin-bottom:16px;">
+              <div style="font-size:0.85rem;color:var(--gray-500);margin-bottom:8px;">Session Type</div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="padding:12px 14px;border:1.5px solid var(--blue-400);border-radius:var(--radius-md);background:var(--blue-50);cursor:pointer;">
+                  <div style="font-weight:600;font-size:0.9rem;color:var(--blue-700);">📹 Video Call – ₹800</div>
+                  <div style="font-size:0.78rem;color:var(--gray-400);margin-top:2px;">30 minutes</div>
+                </div>
+                <div style="padding:12px 14px;border:1.5px solid var(--gray-200);border-radius:var(--radius-md);cursor:pointer;">
+                  <div style="font-weight:600;font-size:0.9rem;color:var(--gray-700);">💬 Chat – ₹400</div>
+                  <div style="font-size:0.78rem;color:var(--gray-400);margin-top:2px;">Async, replies in 2h</div>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;gap:8px;flex-direction:column;">
+              <div style="font-size:0.82rem;color:var(--gray-500);font-weight:500;">Next available:</div>
+              <div style="font-weight:700;color:var(--gray-800);font-size:0.95rem;">Today at 3:00 PM</div>
+            </div>
+            <button class="btn btn-primary w-full mt-4" onclick="showScreen('booking')" style="justify-content:center;padding:13px;">Book Appointment →</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     6. BOOKING
+═══════════════════════════════════════════ -->
+<div id="screen-booking" class="screen">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-item" onclick="showScreen('dashboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </div>
+      <div class="sidebar-item active" onclick="showScreen('booking')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Appointments
+      </div>
+      <div class="sidebar-item" onclick="showScreen('chat')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Messages
+      </div>
+    </aside>
+    <main class="main-content">
+      <div style="margin-bottom:16px;"><a onclick="showScreen('expert')" style="color:var(--blue-600);cursor:pointer;font-size:0.9rem;font-weight:500;">← Back to Profile</a></div>
+      <div class="page-header"><div class="page-title">Book Appointment</div><div class="page-sub">Select your preferred date and time</div></div>
+      <div class="booking-layout">
+        <div>
+          <div class="card mb-6">
+            <div class="calendar-header">
+              <div class="calendar-title">January 2025</div>
+              <div class="calendar-nav">
+                <button class="cal-btn">‹</button>
+                <button class="cal-btn">›</button>
+              </div>
+            </div>
+            <div class="calendar-grid">
+              <div class="cal-day-label">Sun</div><div class="cal-day-label">Mon</div><div class="cal-day-label">Tue</div>
+              <div class="cal-day-label">Wed</div><div class="cal-day-label">Thu</div><div class="cal-day-label">Fri</div><div class="cal-day-label">Sat</div>
+              <div class="cal-day other-month">29</div><div class="cal-day other-month">30</div><div class="cal-day other-month">31</div>
+              <div class="cal-day">1</div><div class="cal-day">2</div><div class="cal-day">3</div><div class="cal-day">4</div>
+              <div class="cal-day">5</div><div class="cal-day">6</div><div class="cal-day">7</div><div class="cal-day">8</div><div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div>
+              <div class="cal-day">12</div><div class="cal-day">13</div><div class="cal-day today">14</div><div class="cal-day selected" onclick="selectDay(this)">15</div><div class="cal-day" onclick="selectDay(this)">16</div><div class="cal-day" onclick="selectDay(this)">17</div><div class="cal-day" onclick="selectDay(this)">18</div>
+              <div class="cal-day" onclick="selectDay(this)">19</div><div class="cal-day" onclick="selectDay(this)">20</div><div class="cal-day" onclick="selectDay(this)">21</div><div class="cal-day" onclick="selectDay(this)">22</div><div class="cal-day" onclick="selectDay(this)">23</div><div class="cal-day" onclick="selectDay(this)">24</div><div class="cal-day" onclick="selectDay(this)">25</div>
+              <div class="cal-day" onclick="selectDay(this)">26</div><div class="cal-day" onclick="selectDay(this)">27</div><div class="cal-day" onclick="selectDay(this)">28</div><div class="cal-day" onclick="selectDay(this)">29</div><div class="cal-day" onclick="selectDay(this)">30</div><div class="cal-day" onclick="selectDay(this)">31</div><div class="cal-day other-month">1</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">Available Time Slots — Jan 15</div>
+            <div class="time-slots">
+              <div class="time-slot unavailable">9:00 AM</div>
+              <div class="time-slot unavailable">9:30 AM</div>
+              <div class="time-slot" onclick="selectSlot(this)">10:00 AM</div>
+              <div class="time-slot" onclick="selectSlot(this)">10:30 AM</div>
+              <div class="time-slot unavailable">11:00 AM</div>
+              <div class="time-slot" onclick="selectSlot(this)">11:30 AM</div>
+              <div class="time-slot unavailable">12:00 PM</div>
+              <div class="time-slot unavailable">12:30 PM</div>
+              <div class="time-slot" onclick="selectSlot(this)">1:00 PM</div>
+              <div class="time-slot selected" onclick="selectSlot(this)">3:00 PM</div>
+              <div class="time-slot" onclick="selectSlot(this)">3:30 PM</div>
+              <div class="time-slot" onclick="selectSlot(this)">4:00 PM</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="booking-summary">
+            <div class="summary-expert">
+              <div class="summary-avatar">🩺</div>
+              <div>
+                <div style="font-weight:700;font-size:0.95rem;color:var(--gray-900);">Dr. Ananya Sharma</div>
+                <div style="font-size:0.82rem;color:var(--gray-400);">Cardiologist</div>
+              </div>
+            </div>
+            <div class="summary-line">
+              <div class="summary-label">Date</div>
+              <div class="summary-value">Jan 15, 2025</div>
+            </div>
+            <div class="summary-line">
+              <div class="summary-label">Time</div>
+              <div class="summary-value">3:00 PM IST</div>
+            </div>
+            <div class="summary-line">
+              <div class="summary-label">Duration</div>
+              <div class="summary-value">30 minutes</div>
+            </div>
+            <div class="summary-line">
+              <div class="summary-label">Type</div>
+              <div class="summary-value">📹 Video Call</div>
+            </div>
+            <div class="summary-line" style="border-top:1.5px solid var(--gray-200);margin-top:4px;padding-top:12px;">
+              <div class="summary-label" style="font-weight:700;color:var(--gray-800);">Total</div>
+              <div class="summary-total">₹800</div>
+            </div>
+            <button class="btn btn-primary w-full mt-4" onclick="showScreen('payment')" style="justify-content:center;padding:13px;">Confirm & Pay →</button>
+            <div style="font-size:0.78rem;color:var(--gray-400);text-align:center;margin-top:12px;">🔒 Free cancellation up to 24h before</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     7. PAYMENT
+═══════════════════════════════════════════ -->
+<div id="screen-payment" class="screen">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-item" onclick="showScreen('dashboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </div>
+      <div class="sidebar-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Payment</div>
+    </aside>
+    <main class="main-content">
+      <div style="margin-bottom:16px;"><a onclick="showScreen('booking')" style="color:var(--blue-600);cursor:pointer;font-size:0.9rem;font-weight:500;">← Back to Booking</a></div>
+      <div class="page-header"><div class="page-title">Secure Payment</div><div class="page-sub">Complete your booking</div></div>
+      <div class="payment-layout">
+        <div>
+          <div class="card mb-6">
+            <div class="card-title">Payment Method</div>
+            <div class="payment-methods">
+              <div class="payment-method selected">
+                <div class="payment-method-icon">💳</div>
+                <div><div class="payment-method-name">Credit / Debit Card</div><div class="payment-method-desc">Visa, Mastercard, RuPay</div></div>
+                <div class="radio-dot"></div>
+              </div>
+              <div class="payment-method" onclick="selectPayment(this)">
+                <div class="payment-method-icon">🏦</div>
+                <div><div class="payment-method-name">Net Banking</div><div class="payment-method-desc">All major banks</div></div>
+                <div class="radio-dot"></div>
+              </div>
+              <div class="payment-method" onclick="selectPayment(this)">
+                <div class="payment-method-icon">📱</div>
+                <div><div class="payment-method-name">UPI</div><div class="payment-method-desc">GPay, PhonePe, Paytm</div></div>
+                <div class="radio-dot"></div>
+              </div>
+              <div class="payment-method" onclick="selectPayment(this)">
+                <div class="payment-method-icon">💰</div>
+                <div><div class="payment-method-name">ConsultPro Wallet</div><div class="payment-method-desc">Balance: ₹240</div></div>
+                <div class="radio-dot"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">Card Details</div>
+            <div class="form-group">
+              <label class="form-label">Name on Card</label>
+              <input class="form-input" type="text" placeholder="Priya Reddy">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Card Number</label>
+              <input class="form-input" type="text" placeholder="1234  5678  9012  3456">
+            </div>
+            <div class="card-input-row">
+              <div class="form-group">
+                <label class="form-label">Expiry Date</label>
+                <input class="form-input" type="text" placeholder="MM / YY">
+              </div>
+              <div class="form-group">
+                <label class="form-label">CVV</label>
+                <input class="form-input" type="text" placeholder="•••">
+              </div>
+            </div>
+            <div class="secure-badge">🔒 256-bit SSL encryption — Your payment is secure</div>
+          </div>
+        </div>
+        <div>
+          <div class="booking-summary">
+            <div class="card-title">Order Summary</div>
+            <div class="summary-expert">
+              <div class="summary-avatar">🩺</div>
+              <div>
+                <div style="font-weight:700;font-size:0.95rem;color:var(--gray-900);">Dr. Ananya Sharma</div>
+                <div style="font-size:0.82rem;color:var(--gray-400);">Jan 15, 2025 · 3:00 PM</div>
+              </div>
+            </div>
+            <div class="summary-line"><div class="summary-label">Consultation fee</div><div class="summary-value">₹800</div></div>
+            <div class="summary-line"><div class="summary-label">Platform fee</div><div class="summary-value">₹40</div></div>
+            <div class="summary-line"><div class="summary-label">GST (18%)</div><div class="summary-value">₹151</div></div>
+            <div class="summary-line" style="border-top:1.5px solid var(--gray-200);margin-top:4px;padding-top:12px;">
+              <div style="font-weight:700;color:var(--gray-800);">Total</div>
+              <div class="summary-total">₹991</div>
+            </div>
+            <button class="btn btn-primary w-full mt-4" onclick="showPaymentSuccess()" style="justify-content:center;padding:13px;font-size:1rem;">Pay ₹991 →</button>
+            <div style="font-size:0.78rem;color:var(--gray-400);text-align:center;margin-top:12px;">🔒 100% secure payment</div>
+          </div>
+        </div>
+      </div>
+      <!-- Success Modal -->
+      <div id="payment-success" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:9999;display:none;align-items:center;justify-content:center;">
+        <div style="background:white;border-radius:var(--radius-xl);padding:48px 40px;text-align:center;max-width:400px;width:90%;box-shadow:var(--shadow-xl);">
+          <div style="font-size:4rem;margin-bottom:16px;">✅</div>
+          <div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gray-900);margin-bottom:8px;">Booking Confirmed!</div>
+          <div style="color:var(--gray-500);font-size:0.95rem;margin-bottom:28px;">Your appointment with Dr. Ananya Sharma is confirmed for Jan 15 at 3:00 PM. A confirmation email has been sent.</div>
+          <button class="btn btn-primary btn-lg w-full" onclick="showScreen('dashboard');document.getElementById('payment-success').style.display='none';" style="justify-content:center;">Go to Dashboard</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     8. CHAT
+═══════════════════════════════════════════ -->
+<div id="screen-chat" class="screen">
+  <div class="chat-layout">
+    <div class="chat-sidebar">
+      <div class="chat-sidebar-header">
+        <div class="chat-sidebar-title">Messages</div>
+        <div class="chat-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" placeholder="Search conversations…">
+        </div>
+      </div>
+      <div class="chat-list">
+        <div class="chat-list-item active">
+          <div class="chat-list-avatar" style="background:#dbeafe;">🩺</div>
+          <div class="chat-list-info">
+            <div class="chat-list-name">Dr. Ananya Sharma</div>
+            <div class="chat-list-preview">See you at 3 PM today!</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
+            <div class="chat-list-time">10:42</div>
+            <div class="unread-dot"></div>
+          </div>
+        </div>
+        <div class="chat-list-item">
+          <div class="chat-list-avatar" style="background:#dcfce7;">⚖️</div>
+          <div class="chat-list-info">
+            <div class="chat-list-name">Adv. Rohan Mehta</div>
+            <div class="chat-list-preview">I'll review your contract draft...</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
+            <div class="chat-list-time">Yesterday</div>
+            <div class="unread-dot"></div>
+          </div>
+        </div>
+        <div class="chat-list-item">
+          <div class="chat-list-avatar" style="background:#ede9fe;">🧠</div>
+          <div class="chat-list-info">
+            <div class="chat-list-name">Dr. Kavya Iyer</div>
+            <div class="chat-list-preview">How are you feeling today?</div>
+          </div>
+          <div class="chat-list-time">Mon</div>
+        </div>
+        <div class="chat-list-item">
+          <div class="chat-list-avatar" style="background:#fef3c7;">💰</div>
+          <div class="chat-list-info">
+            <div class="chat-list-name">Vikram Nair, CFP</div>
+            <div class="chat-list-preview">Your portfolio analysis is ready</div>
+          </div>
+          <div class="chat-list-time">Sun</div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-main">
+      <div class="chat-main-header">
+        <div class="chat-main-avatar" style="background:#dbeafe;">🩺</div>
+        <div>
+          <div class="chat-main-name">Dr. Ananya Sharma <span class="online-dot"></span></div>
+          <div class="chat-main-status">Cardiologist · Online</div>
+        </div>
+        <div class="chat-actions">
+          <button class="icon-btn" onclick="showScreen('video')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </button>
+          <button class="icon-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="date-divider">Today, January 15</div>
+        <div class="msg">
+          <div class="msg-avatar" style="background:#dbeafe;">🩺</div>
+          <div>
+            <div class="msg-bubble theirs">Hello! I've reviewed your previous reports. How have you been feeling this week?</div>
+            <div class="msg-time">10:15 AM</div>
+          </div>
+        </div>
+        <div class="msg mine">
+          <div class="msg-avatar" style="background:#bfdbfe;">P</div>
+          <div>
+            <div class="msg-bubble mine">Hi Dr. Sharma! I've been better. The new medication seems to be helping. My blood pressure readings have been more stable.</div>
+            <div class="msg-time">10:18 AM</div>
+          </div>
+        </div>
+        <div class="msg">
+          <div class="msg-avatar" style="background:#dbeafe;">🩺</div>
+          <div>
+            <div class="msg-bubble theirs">That's wonderful news! Please share your readings from this week when you can. Also, are you experiencing any side effects?</div>
+            <div class="msg-time">10:20 AM</div>
+          </div>
+        </div>
+        <div class="msg mine">
+          <div class="msg-avatar" style="background:#bfdbfe;">P</div>
+          <div>
+            <div class="msg-bubble mine">No side effects so far. My readings: 125/80, 122/78, 118/76. Much better than last month!</div>
+            <div class="msg-time">10:35 AM</div>
+          </div>
+        </div>
+        <div class="msg">
+          <div class="msg-avatar" style="background:#dbeafe;">🩺</div>
+          <div>
+            <div class="msg-bubble theirs">Excellent progress! Those are great numbers. See you at 3 PM today for your follow-up video call! 👍</div>
+            <div class="msg-time">10:42 AM</div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <button class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+        </button>
+        <div class="chat-input-wrap">
+          <textarea class="chat-input" rows="1" placeholder="Type a message…" id="chat-msg-input"></textarea>
+          <div class="attach-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
+        </div>
+        <button class="send-btn" onclick="sendMessage()">
+          <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     9. VIDEO CONSULTATION
+═══════════════════════════════════════════ -->
+<div id="screen-video" class="screen">
+  <div class="video-screen-wrap">
+    <div class="video-main">
+      <div class="video-primary">
+        <div class="video-avatar-large">🩺</div>
+        <div class="video-name-overlay">
+          <div class="video-name-badge">Dr. Ananya Sharma</div>
+          <div style="display:flex;align-items:center;gap:6px;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);padding:6px 12px;border-radius:var(--radius-full);">
+            <div class="recording-dot"></div>
+            <span style="color:white;font-size:0.8rem;font-weight:500;">Recording</span>
+          </div>
+        </div>
+        <div class="video-self">👤</div>
+      </div>
+      <div class="video-sidebar-panel">
+        <div class="video-sidebar-tabs">
+          <div class="video-tab active" onclick="switchVideoTab(this,'vchat')">Chat</div>
+          <div class="video-tab" onclick="switchVideoTab(this,'vparticipants')">Participants (2)</div>
+        </div>
+        <div id="vchat-panel" style="display:flex;flex-direction:column;flex:1;overflow:hidden;">
+          <div class="video-chat-messages">
+            <div class="vchat-msg">
+              <div class="vchat-sender">Dr. Ananya Sharma</div>
+              <div class="vchat-bubble">Good afternoon! Can you hear me clearly?</div>
+            </div>
+            <div class="vchat-msg" style="align-items:flex-end;">
+              <div class="vchat-sender" style="text-align:right;">You</div>
+              <div class="vchat-bubble mine">Yes, loud and clear! The connection is great.</div>
+            </div>
+            <div class="vchat-msg">
+              <div class="vchat-sender">Dr. Ananya Sharma</div>
+              <div class="vchat-bubble">Let me pull up your latest reports. Give me a moment.</div>
+            </div>
+          </div>
+          <div class="video-chat-input">
+            <input type="text" placeholder="Type a message…">
+            <button class="send-btn" style="width:36px;height:36px;">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z" fill="white"/></svg>
+            </button>
+          </div>
+        </div>
+        <div id="vparticipants-panel" style="display:none;flex:1;overflow:hidden;">
+          <div class="participants-panel">
+            <div class="participant-item">
+              <div class="participant-avatar" style="background:linear-gradient(135deg,var(--blue-600),var(--blue-400));">🩺</div>
+              <div>
+                <div class="participant-name">Dr. Ananya Sharma</div>
+                <div class="participant-role">Host · Cardiologist</div>
+              </div>
+              <div class="participant-muted">🎤</div>
+            </div>
+            <div class="participant-item">
+              <div class="participant-avatar" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa);">P</div>
+              <div>
+                <div class="participant-name">Priya Reddy (You)</div>
+                <div class="participant-role">Patient</div>
+              </div>
+              <div class="participant-muted">🎤</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="video-controls">
+      <span class="timer" id="call-timer">00:12:34</span>
+      <button class="vcontrol-btn normal" title="Mute">🎤</button>
+      <button class="vcontrol-btn normal" title="Camera">📹</button>
+      <button class="vcontrol-btn normal" title="Screen Share">🖥️</button>
+      <button class="vcontrol-btn active" title="Chat" onclick="showScreen('chat')">💬</button>
+      <button class="vcontrol-btn normal" title="Participants">👥</button>
+      <button class="vcontrol-btn normal" title="Settings">⚙️</button>
+      <button class="vcontrol-btn end" onclick="showScreen('dashboard')">End</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     10. USER PROFILE
+═══════════════════════════════════════════ -->
+<div id="screen-profile" class="screen">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-item" onclick="showScreen('dashboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </div>
+      <div class="sidebar-item" onclick="showScreen('listing')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Find Experts
+      </div>
+      <div class="sidebar-item" onclick="showScreen('chat')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Messages
+        <span class="sidebar-badge">3</span>
+      </div>
+      <div class="sidebar-section-label">Account</div>
+      <div class="sidebar-item active" onclick="showScreen('profile')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        My Profile
+      </div>
+      <div class="sidebar-item" onclick="showScreen('notifications')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        Notifications
+        <span class="sidebar-badge">5</span>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="page-header"><div class="page-title">My Profile</div></div>
+      <div class="profile-card-header">
+        <div class="user-avatar-large">👤</div>
+        <div>
+          <div class="user-name-large">Priya Reddy</div>
+          <div class="user-email">priya.reddy@gmail.com</div>
+          <div class="user-since">Member since January 2024</div>
+          <div class="profile-stats">
+            <div class="profile-stat"><div class="profile-stat-num">14</div><div class="profile-stat-label">Consultations</div></div>
+            <div class="profile-stat"><div class="profile-stat-num">6</div><div class="profile-stat-label">Experts</div></div>
+            <div class="profile-stat"><div class="profile-stat-num">₹9,200</div><div class="profile-stat-label">Spent</div></div>
+          </div>
+        </div>
+        <div style="margin-left:auto;">
+          <button class="btn" style="background:rgba(255,255,255,0.2);color:white;border:1.5px solid rgba(255,255,255,0.3);">Edit Photo</button>
+        </div>
+      </div>
+      <div class="profile-form-section">
+        <div class="section-header">
+          <div style="font-weight:700;font-size:1rem;color:var(--gray-800);">Personal Information</div>
+          <button class="btn btn-outline btn-sm">Edit</button>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">First Name</label><input class="form-input" value="Priya" readonly></div>
+          <div class="form-group"><label class="form-label">Last Name</label><input class="form-input" value="Reddy" readonly></div>
+        </div>
+        <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" value="priya.reddy@gmail.com" readonly></div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Phone Number</label><input class="form-input" value="+91 98765 43210" readonly></div>
+          <div class="form-group"><label class="form-label">Date of Birth</label><input class="form-input" value="March 15, 1990" readonly></div>
+        </div>
+        <div class="form-group"><label class="form-label">Location</label><input class="form-input" value="Hyderabad, Telangana" readonly></div>
+      </div>
+      <div class="profile-form-section">
+        <div class="section-header">
+          <div style="font-weight:700;font-size:1rem;color:var(--gray-800);">Health & Medical Info</div>
+          <button class="btn btn-outline btn-sm">Edit</button>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Blood Group</label><input class="form-input" value="O+" readonly></div>
+          <div class="form-group"><label class="form-label">Allergies</label><input class="form-input" value="Penicillin" readonly></div>
+        </div>
+        <div class="form-group"><label class="form-label">Existing Conditions</label><input class="form-input" value="Hypertension (managed)" readonly></div>
+      </div>
+      <div class="profile-form-section">
+        <div class="section-header">
+          <div style="font-weight:700;font-size:1rem;color:var(--gray-800);">Account Settings</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--gray-100);">
+            <div><div style="font-weight:500;font-size:0.9rem;color:var(--gray-800);">Email Notifications</div><div style="font-size:0.8rem;color:var(--gray-400);">Receive appointment reminders</div></div>
+            <div style="width:44px;height:24px;background:var(--blue-600);border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:flex-end;padding-right:3px;"><div style="width:18px;height:18px;border-radius:50%;background:white;"></div></div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--gray-100);">
+            <div><div style="font-weight:500;font-size:0.9rem;color:var(--gray-800);">SMS Reminders</div><div style="font-size:0.8rem;color:var(--gray-400);">Get SMS 1 hour before appointments</div></div>
+            <div style="width:44px;height:24px;background:var(--blue-600);border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:flex-end;padding-right:3px;"><div style="width:18px;height:18px;border-radius:50%;background:white;"></div></div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 0;">
+            <div><div style="font-weight:500;font-size:0.9rem;color:var(--gray-800);">Marketing Emails</div><div style="font-size:0.8rem;color:var(--gray-400);">Offers and platform updates</div></div>
+            <div style="width:44px;height:24px;background:var(--gray-300);border-radius:12px;cursor:pointer;display:flex;align-items:center;padding-left:3px;"><div style="width:18px;height:18px;border-radius:50%;background:white;"></div></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <button class="btn btn-outline" style="color:#ef4444;border-color:#fca5a5;">Change Password</button>
+        <button class="btn btn-outline" style="color:#ef4444;border-color:#fca5a5;" onclick="showScreen('landing')">Log Out</button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     11. NOTIFICATIONS
+═══════════════════════════════════════════ -->
+<div id="screen-notifications" class="screen">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-item" onclick="showScreen('dashboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </div>
+      <div class="sidebar-item" onclick="showScreen('listing')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Find Experts
+      </div>
+      <div class="sidebar-item" onclick="showScreen('chat')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Messages
+        <span class="sidebar-badge">3</span>
+      </div>
+      <div class="sidebar-section-label">Account</div>
+      <div class="sidebar-item" onclick="showScreen('profile')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        My Profile
+      </div>
+      <div class="sidebar-item active" onclick="showScreen('notifications')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        Notifications
+        <span class="sidebar-badge">5</span>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="flex items-center justify-between mb-6">
+        <div><div class="page-title">Notifications</div><div class="page-sub">Stay up to date</div></div>
+        <button class="btn btn-ghost btn-sm">Mark all as read</button>
+      </div>
+      <div class="notif-list" style="display:flex;flex-direction:column;gap:8px;">
+        <div class="notif-item unread">
+          <div class="notif-icon" style="background:#dbeafe;">📅</div>
+          <div style="flex:1;">
+            <div class="notif-title">Appointment Reminder</div>
+            <div class="notif-text">Your video consultation with Dr. Ananya Sharma starts in 1 hour at 3:00 PM.</div>
+            <div class="notif-time">2 hours ago</div>
+          </div>
+          <div class="notif-dot"></div>
+        </div>
+        <div class="notif-item unread">
+          <div class="notif-icon" style="background:#dcfce7;">💬</div>
+          <div style="flex:1;">
+            <div class="notif-title">New Message</div>
+            <div class="notif-text">Dr. Ananya Sharma sent you a message: "See you at 3 PM today!"</div>
+            <div class="notif-time">3 hours ago</div>
+          </div>
+          <div class="notif-dot"></div>
+        </div>
+        <div class="notif-item unread">
+          <div class="notif-icon" style="background:#fef3c7;">✅</div>
+          <div style="flex:1;">
+            <div class="notif-title">Booking Confirmed</div>
+            <div class="notif-text">Your appointment with Adv. Rohan Mehta on Jan 16 at 11:00 AM has been confirmed.</div>
+            <div class="notif-time">Yesterday at 4:30 PM</div>
+          </div>
+          <div class="notif-dot"></div>
+        </div>
+        <div class="notif-item unread">
+          <div class="notif-icon" style="background:#ede9fe;">⭐</div>
+          <div style="flex:1;">
+            <div class="notif-title">Leave a Review</div>
+            <div class="notif-text">How was your session with Dr. Kavya Iyer? Share your feedback to help others.</div>
+            <div class="notif-time">Jan 10, 6:00 PM</div>
+          </div>
+          <div class="notif-dot"></div>
+        </div>
+        <div class="notif-item unread">
+          <div class="notif-icon" style="background:#fee2e2;">💰</div>
+          <div style="flex:1;">
+            <div class="notif-title">Payment Successful</div>
+            <div class="notif-text">₹800 paid to Dr. Ananya Sharma for consultation on Jan 15. View receipt.</div>
+            <div class="notif-time">Jan 10, 2:15 PM</div>
+          </div>
+          <div class="notif-dot"></div>
+        </div>
+        <div class="notif-item">
+          <div class="notif-icon" style="background:#f0fdf4;">🎉</div>
+          <div style="flex:1;">
+            <div class="notif-title">Welcome to ConsultPro!</div>
+            <div class="notif-text">Your account is set up. Browse experts and book your first consultation for free.</div>
+            <div class="notif-time">Jan 8, 10:00 AM</div>
+          </div>
+        </div>
+        <div class="notif-item">
+          <div class="notif-icon" style="background:#dbeafe;">📋</div>
+          <div style="flex:1;">
+            <div class="notif-title">Consultation Summary Available</div>
+            <div class="notif-text">Dr. Kavya Iyer has shared a session summary and follow-up recommendations for you.</div>
+            <div class="notif-time">Jan 7, 8:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script>
+  // ─── Screen routing ───
+  function showScreen(name) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('screen-' + name).classList.add('active');
+    window.scrollTo(0,0);
+  }
+
+  // ─── Auth tab switching ───
+  function switchAuthTab(el, type) {
+    document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('login-form').style.display = type === 'login' ? 'block' : 'none';
+    document.getElementById('signup-form').style.display = type === 'signup' ? 'block' : 'none';
+  }
+
+  // ─── Profile tab switching ───
+  function switchProfileTab(el, type) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('about-tab').style.display = type === 'about' ? 'block' : 'none';
+    document.getElementById('reviews-tab').style.display = type === 'reviews' ? 'block' : 'none';
+  }
+
+  // ─── Video tab ───
+  function switchVideoTab(el, type) {
+    document.querySelectorAll('.video-tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('vchat-panel').style.display = type === 'vchat' ? 'flex' : 'none';
+    document.getElementById('vparticipants-panel').style.display = type === 'vparticipants' ? 'block' : 'none';
+  }
+
+  // ─── Calendar ───
+  function selectDay(el) {
+    document.querySelectorAll('.cal-day.selected').forEach(d => d.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+
+  // ─── Time slot ───
+  function selectSlot(el) {
+    document.querySelectorAll('.time-slot.selected').forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+
+  // ─── Payment method ───
+  function selectPayment(el) {
+    document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+
+  // ─── Payment success ───
+  function showPaymentSuccess() {
+    const m = document.getElementById('payment-success');
+    m.style.display = 'flex';
+  }
+
+  // ─── Chat ───
+  function sendMessage() {
+    const input = document.getElementById('chat-msg-input');
+    const text = input.value.trim();
+    if (!text) return;
+    const messages = document.getElementById('chat-messages');
+    const msgEl = document.createElement('div');
+    msgEl.className = 'msg mine';
+    msgEl.innerHTML = `
+      <div class="msg-avatar" style="background:#bfdbfe;">P</div>
+      <div>
+        <div class="msg-bubble mine">${text}</div>
+        <div class="msg-time">Just now</div>
+      </div>`;
+    messages.appendChild(msgEl);
+    input.value = '';
+    messages.scrollTop = messages.scrollHeight;
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('chat-msg-input');
+    if (input) input.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } });
+  });
+
+  // ─── Video timer ───
+  let seconds = 754;
+  setInterval(() => {
+    seconds++;
+    const h = Math.floor(seconds/3600);
+    const m = Math.floor((seconds%3600)/60);
+    const s = seconds%60;
+    const el = document.getElementById('call-timer');
+    if (el) el.textContent = [h,m,s].map(n=>String(n).padStart(2,'0')).join(':');
+  }, 1000);
+
+  // ─── Filter chips ───
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      if (this.textContent.includes('Filter')) return;
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
